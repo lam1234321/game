@@ -3,28 +3,28 @@
 window.initGame = (React, assetsUrl) => {
   const { useState, useEffect } = React;
 
-  const WhackAMole = ({ assetsUrl }) => {
+  const WhackAMonkey = ({ assetsUrl }) => {
     const [score, setScore] = useState(0);
-    const [activeMole, setActiveMole] = useState(null);
+    const [activeMonkey, setActiveMonkey] = useState(null);
 
     useEffect(() => {
       const interval = setInterval(() => {
-        setActiveMole(Math.floor(Math.random() * 9));
+        setActiveMonkey(Math.floor(Math.random() * 9));
       }, 1000);
       return () => clearInterval(interval);
     }, []);
 
-    const whackMole = (index) => {
-      if (index === activeMole) {
+    const whackmMonkey = (index) => {
+      if (index === activeMonkey) {
         setScore(score + 1);
-        setActiveMole(null);
+        setActiveMonkey(null);
       }
     };
 
     return React.createElement(
       'div',
-      { className: "whack-a-mole" },
-      React.createElement('h2', null, "Whack-a-Mole"),
+      { className: "whack-a-Monkey" },
+      React.createElement('h2', null, "Whack-a-Monkey"),
       React.createElement('p', null, `Score: ${score}`),
       React.createElement(
         'div',
@@ -34,17 +34,17 @@ window.initGame = (React, assetsUrl) => {
             'div',
             {
               key: index,
-              className: `mole ${index === activeMole ? 'active' : ''}`,
-              onClick: () => whackMole(index)
+              className: `Monkey ${index === activeMonkey ? 'active' : ''}`,
+              onClick: () => whackMonkey(index)
             },
-            index === activeMole && React.createElement('img', { src: `${assetsUrl}/mole.png`, alt: "Mole" })
+            index === activeMonkey && React.createElement('img', { src: `${assetsUrl}/Monkey.png`, alt: "Monkey" })
           )
         )
       )
     );
   };
 
-  return () => React.createElement(WhackAMole, { assetsUrl: assetsUrl });
+  return () => React.createElement(WhackAMonkey, { assetsUrl: assetsUrl });
 };
 
-console.log('Whack-a-Mole game script loaded');
+console.log('Whack-a-Monkey game script loaded');
