@@ -48,12 +48,3 @@ window.initGame = (React, assetsUrl) => {
 };
 
 console.log('Whack-a-Mole game script loaded');
-
-// Using getElementById
-const myImage = document.getElementById('mole.png');
-
-// Using querySelector
-const myImage = document.querySelector('#mole.png');
-
-const newImage = new Image();
-newImage.src = 'monkey.png';
