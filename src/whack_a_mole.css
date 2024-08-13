@@ -1,5 +1,5 @@
 /* whack-a-mole.css */
-.whack-a-monkey {
+.whack-a-mole {
   text-align: center;
 }
 
@@ -11,7 +11,7 @@
   width: 320px;
 }
 
-.chi {
+.mole {
   width: 100px;
   height: 100px;
   background-color: #8B4513;
@@ -19,11 +19,11 @@
   cursor: pointer;
 }
 
-.chi.active {
+.mole.active {
   background-color: #228B22;
 }
 
-.chi img {
+.mole img {
   width: 100%;
   height: 100%;
   object-fit: cover;
