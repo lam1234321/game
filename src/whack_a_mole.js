@@ -37,7 +37,7 @@ window.initGame = (React, assetsUrl) => {
               className: `Monkey ${index === activeMonkey ? 'active' : ''}`,
               onClick: () => whackMonkey(index)
             },
-            index === activeMonkey && React.createElement('img', { src: `${assetsUrl}/Monkey.png`, alt: "Monkey" })
+            index === activeMonkey && React.createElement('img', { src: `${assetsUrl}/monkey.png`, alt: "Monkey" })
           )
         )
       )
