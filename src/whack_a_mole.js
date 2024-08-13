@@ -34,10 +34,10 @@ window.initGame = (React, assetsUrl) => {
             'div',
             {
               key: index,
-              className: `chi ${index === activeMole ? 'active' : ''}`,
+              className: `mole ${index === activeMole ? 'active' : ''}`,
               onClick: () => whackMole(index)
             },
-            index === activeMole && React.createElement('img', { src: `${assetsUrl}/chi.png`, alt: "Chi" })
+            index === activeMole && React.createElement('img', { src: `${assetsUrl}/mole.png`, alt: "Mole" })
           )
         )
       )
